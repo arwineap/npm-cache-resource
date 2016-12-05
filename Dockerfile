@@ -1,4 +1,7 @@
 FROM node:4
+RUN apt-get update \
+    && apt-get install -y wget unzip \
+    && rm -rf /var/lib/apt/lists/*
 
 # according to Brian Clements, can't `git pull` unless we set these
 RUN git config --global user.email "git@localhost" && \
