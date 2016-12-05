@@ -1,25 +1,4 @@
-FROM mhart/alpine-node:6
-
-MAINTAINER Yeray Medina López <ymedlop@gmail.com>
-
-RUN apk add --update \
-    openssl \
-    sed \
-    ca-certificates \
-    bash \
-    openssh \
-    make \
-    git \
-    jq \
-    libstdc++ \
-    libpng-dev \
-    nasm \
-    build-base \
-    python \
-    python-dev \
-    autoconf \
-    nasm \
-  && rm -rf /var/cache/apk/*
+FROM node:4
 
 # according to Brian Clements, can't `git pull` unless we set these
 RUN git config --global user.email "git@localhost" && \
