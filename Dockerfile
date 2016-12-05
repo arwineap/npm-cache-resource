@@ -17,6 +17,7 @@ RUN apk add --update \
     build-base \
     python \
     python-dev \
+    autoconf \
   && rm -rf /var/cache/apk/*
 
 # according to Brian Clements, can't `git pull` unless we set these
