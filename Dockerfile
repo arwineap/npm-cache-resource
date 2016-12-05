@@ -18,6 +18,7 @@ RUN apk add --update \
     python \
     python-dev \
     autoconf \
+    nasm \
   && rm -rf /var/cache/apk/*
 
 # according to Brian Clements, can't `git pull` unless we set these
